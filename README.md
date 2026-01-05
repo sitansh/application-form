@@ -24,6 +24,16 @@
 
 ---
 
+## 🏛 Architecture (visual)
+
+A high-level diagram shows where components live and how they interact. The image below references the committed SVG (scalable) and is also available from `docs/architecture/images`.
+
+![Architecture diagram](docs/architecture/images/architecture.svg)
+
+---
+
+---
+
 ## 🚀 Quick start (local)
 
 ### Prerequisites
