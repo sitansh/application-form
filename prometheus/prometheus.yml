@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 15s
+scrape_configs:
+  - job_name: 'backend'
+    static_configs:
+      # On Linux you may need to replace `host.docker.internal` with your host IP
+      - targets: ['host.docker.internal:5000']
