@@ -150,3 +150,12 @@ This project is provided as-is. Add a license file if you want to specify reuse 
 ---
 
 If you'd like, I can add a couple of screenshots, update the `.env` examples, or add a GitHub Actions workflow to build/test the project. 💡
+
+## 📝 Recent changes (2026-01-12)
+
+- Repository pushed to: https://github.com/sitansh/application-form.git
+- Added VS Code run tasks to start servers locally:
+  - `Start Backend Server`: `cd backend && npm start`
+  - `Start Frontend Server`: `cd frontend && npm start`
+
+You can run these directly from the terminal or use the VS Code `Run Task` UI (named tasks are defined in the workspace). The repository now includes the backend tests under `backend/tests`.
