@@ -9,13 +9,17 @@ const setLogger = (logInstance) => {
 
 const connectDB = async () => {
   try {
-    const uri = process.env.MONGODB_URI;
+    const uri = process.env.MONGODB_URI || process.env.CRM_MONGODB_URI;
+    if (!uri) {
+      throw new Error('MongoDB URI not configured. Set MONGODB_URI or CRM_MONGODB_URI in .env');
+    }
+
     if (logger) {
       logger.info({
-        component: 'backend',
+        component: 'crm-backend',
         service: 'database',
         event: 'database_connection_attempt',
-        uri: uri ? uri.replace(/\/\/[^:]+:[^@]+@/, '//***:***@') : null, // Hide credentials
+        uri: uri ? uri.replace(/\/\/[^:]+:[^@]+@/, '//***:***@') : null,
         status: 'connecting'
       }, 'Attempting MongoDB connection');
     }
@@ -33,7 +37,7 @@ const connectDB = async () => {
     
     if (logger) {
       logger.info({
-        component: 'backend',
+        component: 'crm-backend',
         service: 'database',
         event: 'database_connection_success',
         database: dbStatus
@@ -46,7 +50,7 @@ const connectDB = async () => {
     connection.on('error', (err) => {
       if (logger) {
         logger.error({
-          component: 'backend',
+          component: 'crm-backend',
           service: 'database',
           event: 'database_connection_error',
           error: err.message,
@@ -63,7 +67,7 @@ const connectDB = async () => {
     connection.on('disconnected', () => {
       if (logger) {
         logger.warn({
-          component: 'backend',
+          component: 'crm-backend',
           service: 'database',
           event: 'database_disconnected',
           database: {
@@ -77,7 +81,7 @@ const connectDB = async () => {
     connection.on('reconnected', () => {
       if (logger) {
         logger.info({
-          component: 'backend',
+          component: 'crm-backend',
           service: 'database',
           event: 'database_reconnected',
           database: {
@@ -92,7 +96,7 @@ const connectDB = async () => {
   } catch (error) {
     if (logger) {
       logger.error({
-        component: 'backend',
+        component: 'crm-backend',
         service: 'database',
         event: 'database_connection_failed',
         error: error.message,

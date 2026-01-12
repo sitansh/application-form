@@ -1,0 +1,81 @@
+body{font-family:Inter,system-ui,Arial,sans-serif;background:#f7f9fb;color:#111;margin:0;padding:20px}
+.container{max-width:980px;margin:0 auto;background:#fff;padding:20px;border-radius:6px;box-shadow:0 6px 18px rgba(10,22,40,.06)}
+h1{margin:0 0 12px}
+#header{margin-bottom:12px}
+.crm-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.crm-header h1{font-size:22px;margin:0}
+.user-area{font-size:14px;color:#475569}
+.user-label{background:#f1f5f9;padding:6px 10px;border-radius:6px;border:1px solid #e2e8f0}
+
+/* Header left group: logout + title */
+.header-left{display:flex;align-items:center;gap:12px}
+.logout-top{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;border:1px solid transparent;background:#ffffff;color:#0f172a;cursor:pointer}
+.logout-top svg{width:18px;height:18px}
+.logout-top:hover{background:#f1f5f9;box-shadow:0 6px 18px rgba(16,24,40,0.04)}
+.controls{display:flex;gap:8px;margin-bottom:12px;align-items:center}
+.controls input, .controls select{padding:8px;border:1px solid #dfe6ee;border-radius:4px}
+.controls button{padding:8px 12px;border:none;background:#0366d6;color:#fff;border-radius:4px;cursor:pointer}
+.btn-logout{background:#ef4444}
+#message{margin:8px 0;color:#333}
+table{width:100%;border-collapse:collapse}
+th,td{padding:8px;border-bottom:1px solid #eef3f7;text-align:left}
+th{background:#fbfdff}
+
+/* Table card */
+.apps-card{background:#fff;padding:14px;border-radius:8px;box-shadow:0 8px 24px rgba(16,24,40,0.06);}
+tbody tr:hover{background:#fbfdff}
+td.status-new{color:#0366d6;font-weight:600}
+td.status-hired{color:#16a34a;font-weight:600}
+td.status-rejected{color:#ef4444;font-weight:600}
+
+/* Empty message */
+.message{color:#64748b;margin:8px 0}
+
+/* Responsive */
+@media (max-width:720px){
+	.controls{flex-direction:column;align-items:stretch}
+	.crm-header{flex-direction:column;align-items:flex-start;gap:8px}
+}
+
+/* Center the main CRM card vertically on larger viewports */
+.page-center{min-height:calc(100vh - 40px);display:flex;align-items:center;justify-content:center;padding:20px}
+
+@media (max-width:640px){
+	.page-center{padding:12px}
+}
+
+/* Login page styles */
+.login-page {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: calc(100vh - 40px);
+	padding: 40px 20px;
+	background: linear-gradient(180deg, #f4f7fb 0%, #eef6ff 100%);
+}
+.login-card {
+	width: 560px;
+	background: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0 10px 30px rgba(16, 24, 40, 0.08);
+	padding: 28px 28px;
+}
+.login-card h1 { font-size: 22px; margin-bottom: 12px; }
+.login-box label { display: inline-block; margin: 8px 0 4px; color: #334155; font-weight: 600; }
+.login-box input[type="text"], .login-box input[type="password"] {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px 12px;
+	border: 1px solid #e6eef7;
+	border-radius: 6px;
+	background: #fbfdff;
+	margin-bottom: 8px;
+}
+.login-box .btn { padding: 8px 12px; border-radius:6px; border:1px solid #cbd5e1; background:#ffffff; cursor:pointer }
+.login-box .btn:hover { box-shadow: 0 6px 18px rgba(16,24,40,0.06); }
+.login-box .btn-primary { background:#0366d6; color:#fff; border:none }
+.login-box .message { color: #ef4444; margin-top:8px }
+
+@media (max-width: 640px) {
+	.login-card { width: 100%; padding: 20px; border-radius: 8px }
+}

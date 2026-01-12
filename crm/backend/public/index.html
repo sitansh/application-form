@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CRM - Applications</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="page-center">
+    <div class="container">
+    <div class="crm-header">
+      <div class="header-left">
+        <button id="logoutBtn" class="btn logout-top" title="Logout">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        </button>
+        <h1>CRM — Applications</h1>
+      </div>
+      <div class="user-area">
+        <span id="userLabel" class="user-label">Not signed in</span>
+      </div>
+    </div>
+    <div class="controls">
+      <input id="search" placeholder="Search by name or email" />
+      <select id="status">
+        <option value="">All statuses</option>
+        <option value="new">new</option>
+        <option value="reviewed">reviewed</option>
+        <option value="contacted">contacted</option>
+        <option value="interviewed">interviewed</option>
+        <option value="hired">hired</option>
+        <option value="rejected">rejected</option>
+      </select>
+      <button id="refresh">Refresh</button>
+    </div>
+
+    <div id="message" class="message"></div>
+    <table id="apps-table">
+      <thead>
+        <tr>
+          <th>Application ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Submitted At</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    </div>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CRM Login</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="login-page">
+    <div class="login-card">
+      <h1>CRM Login</h1>
+      <div class="login-box">
+        <label for="username">Username</label>
+        <input id="username" type="text" placeholder="admin">
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="password">
+        <div style="margin-top:12px; display:flex; gap:8px; align-items:center;">
+          <button id="loginBtn" class="btn btn-primary">Login</button>
+          <button id="cancelBtn" class="btn">Cancel</button>
+        </div>
+        <div id="loginMsg" class="message" style="margin-top:12px"></div>
+      </div>
+    </div>
+  </div>
+  <script src="/login.js"></script>
+</body>
+</html>

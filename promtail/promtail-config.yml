@@ -14,5 +14,6 @@ scrape_configs:
       - targets:
           - localhost
         labels:
-          job: backend-logs
+          job: application-fullstack
+          component: backend
           __path__: /var/log/backend/*.log
